@@ -54,10 +54,10 @@ class BinarySearchTreeNode:
             elif self.left is None:
                 return self.right
             elif self.right is None:
-                return self.left
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+                return self.right
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
         return self
 
     def find_max(self):
@@ -67,9 +67,8 @@ class BinarySearchTreeNode:
     def find_min(self):
         if self.left is None:
             return self.data
-            
         return self.left.find_min()
-        
+
 def build_tree(elements):
     print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
@@ -91,5 +90,3 @@ if __name__ == '__main__':
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
     numbers_tree.delete(17)
     print("After deleting 17 ",numbers_tree.in_order_traversal())  # this should print [1, 4, 9, 18, 20, 23, 34]
-
-
