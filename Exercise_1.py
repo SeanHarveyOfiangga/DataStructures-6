@@ -4,6 +4,7 @@ class BinarySearchTreeNode:
         self.left = None
         self.right = None
 
+    #child add function
     def add_child(self, data):
         if data == self.data:
             return # node already exist
@@ -19,7 +20,7 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
 
-
+    #search function
     def search(self, val):
         if self.data == val:
             return True
@@ -36,6 +37,7 @@ class BinarySearchTreeNode:
             else:
                 return False
 
+    #in order traversal function
     def in_order_traversal(self):
         elements = []
         if self.left:
@@ -48,6 +50,7 @@ class BinarySearchTreeNode:
 
         return elements
 
+    #post order traversal function
     def post_order_traversal(self):
         elements = []
         if self.left:
@@ -56,7 +59,17 @@ class BinarySearchTreeNode:
             elements += self.right.post_order_traversal()
         elements.append(self.data)
         return elements
-        
+
+    #pre order traversal function
+    def pre_order_traversal(self):
+        elements = [self.data]
+        if self.left:
+            elements += self.left.pre_order_traversal()
+        if self.right:
+            elements += self.right.pre_order_traversal()
+        return elements
+
+#tree building function
 def build_tree(elements):
     print("Building tree with these elements:",elements)
     root = BinarySearchTreeNode(elements[0])
