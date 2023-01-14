@@ -69,6 +69,16 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
         return elements
 
+    #find min and max function
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
 #tree building function
 def build_tree(elements):
     print("Building tree with these elements:",elements)
