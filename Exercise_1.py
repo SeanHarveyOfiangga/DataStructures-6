@@ -106,3 +106,6 @@ if __name__ == '__main__':
     print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
     print("Pre order traversal gives this sorted list:",numbers_tree.pre_order_traversal())
     print("Post order traversal gives this sorted list:",numbers_tree.post_order_traversal())
+    print("The maximum number in the list:",numbers_tree.find_max())
+    print("The minimum number in the list:",numbers_tree.find_min())
+    print("The sum of all the numbers in the list:",numbers_tree.calculate_sum())
