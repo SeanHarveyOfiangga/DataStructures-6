@@ -60,3 +60,14 @@ class BinarySearchTreeNode:
             self.right = self.right.delete(min_val)
         return self
 
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
+
+
