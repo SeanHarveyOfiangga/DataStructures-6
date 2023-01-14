@@ -98,14 +98,14 @@ def build_tree(elements):
 if __name__ == '__main__':
     countries = ["India","Pakistan","Germany", "USA","China","India","UK","USA"]
     country_tree = build_tree(countries)
-
+    # search function
     print("UK is in the list? ", country_tree.search("UK"))
     print("Sweden is in the list? ", country_tree.search("Sweden"))
     print()
     numbers_tree = build_tree([17, 4, 1, 20, 9, 23, 18, 34])
-    print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())
-    print("Pre order traversal gives this sorted list:",numbers_tree.pre_order_traversal())
-    print("Post order traversal gives this sorted list:",numbers_tree.post_order_traversal())
-    print("The maximum number in the list:",numbers_tree.find_max())
-    print("The minimum number in the list:",numbers_tree.find_min())
-    print("The sum of all the numbers in the list:",numbers_tree.calculate_sum())
+    print("In order traversal gives this sorted list:",numbers_tree.in_order_traversal())       # in order traversal function
+    print("Pre order traversal gives this sorted list:",numbers_tree.pre_order_traversal())     # pre order traversal function
+    print("Post order traversal gives this sorted list:",numbers_tree.post_order_traversal())   # post order traversal function
+    print("The maximum number in the list:",numbers_tree.find_max())                            # find max function
+    print("The minimum number in the list:",numbers_tree.find_min())                            # find min function
+    print("The sum of all the numbers in the list:",numbers_tree.calculate_sum())               # sum calculator function
